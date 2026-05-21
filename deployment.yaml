@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastapi-app
+
+  template:
+    metadata:
+      labels:
+        app: fastapi-app
+
+    spec:
+      containers:
+      - name: fastapi-container
+        image: akspracticeacr26abin.azurecr.io/fastapi-aks:v1
+
+        ports:
+        - containerPort: 8000
