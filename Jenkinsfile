@@ -58,6 +58,17 @@ pipeline {
             }
         }
 
+        stage('Connect to AKS') {
+                steps {
+                    sh '''
+                    az aks get-credentials \
+                      --resource-group abindev-rg \
+                      --name aks-practice-cluster \
+                      --overwrite-existing
+                    '''
+                }
+            }
+
         stage('Deploy to AKS') {
             steps {
                 sh '''
