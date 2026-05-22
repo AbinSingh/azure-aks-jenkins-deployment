@@ -36,7 +36,7 @@ Create CI/CD automation workflow in Jenkins.
 
 # Configure
     Field	Value
-    SCM	Git
+        SCM	Git
     Repo URL	your GitHub repo
     Branch	main
     Script Path	Jenkinsfile
