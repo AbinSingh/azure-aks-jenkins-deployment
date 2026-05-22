@@ -23,6 +23,25 @@ pipeline {
             }
         }
 
+        stage('Azure Login') {
+            steps {
+
+                withCredentials([usernamePassword(
+                    credentialsId: 'azure-sp',
+                    usernameVariable: 'AZURE_CLIENT_ID',
+                    passwordVariable: 'AZURE_CLIENT_SECRET'
+                )]) {
+
+                    sh '''
+                    az login --service-principal \
+                      --username $AZURE_CLIENT_ID \
+                      --password $AZURE_CLIENT_SECRET \
+                      --tenant f8cea540-60d7-4415-93b2-6dd05ecad6c0
+                    '''
+                }
+            }
+        }
+
         stage('Login to ACR') {
             steps {
                 sh '''
