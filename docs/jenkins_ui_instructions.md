@@ -72,12 +72,6 @@ Password	your secret/password
 ID	        azure-sp
 Description	Azure Service Principal
 
-# Example
-# Field	Value
-Username	29d94f1f-b026-4ea6-a02c-41073f4bf5df
-Password	your secret
-ID	        azure-sp
-
 Save.
 
 # service principal 
