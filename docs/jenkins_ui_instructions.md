@@ -97,18 +97,3 @@ Save.
    --name jenkins-sp \
    --role Contributor \
    **--scopes /subscriptions/625b6bf8-fcc1-4534-9aca-64ed24279425/resourceGroups/**abindev-rg
- 
- {
-   "appId": "29d94f1f-b026-4ea6-a02c-41073f4bf5df",
-   "displayName": "jenkins-sp",
-   "password": "ZaB8Q~n7f-RmARjPjkW1.zlcKcK7KvgAXYechcei",
-   "tenant": "f8cea540-60d7-4415-93b2-6dd05ecad6c0"
- }
-
-test login:
-
-az login --service-principal \
-  --username 29d94f1f-b026-4ea6-a02c-41073f4bf5df \
-  --password ZaB8Q~n7f-RmARjPjkW1.zlcKcK7KvgAXYechcei \
-  --tenant f8cea540-60d7-4415-93b2-6dd05ecad6c0
-
