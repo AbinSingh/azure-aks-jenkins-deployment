@@ -82,18 +82,12 @@ Save.
 
 # service principal 
 
--- get subscription id
+-- to get subscription id
 
  az account show --query id -o tsv
- 
- subscription id : 625b6bf8-fcc1-4534-9aca-64ed24279425
+
  
  az ad sp create-for-rbac \
    --name jenkins-sp \
    --role Contributor \
    --scopes /subscriptions/SUBSCRIPTION_ID/resourceGroups/YOUR_RESOURCE_GROUP
- 
- az ad sp create-for-rbac \
-   --name jenkins-sp \
-   --role Contributor \
-   **--scopes /subscriptions/625b6bf8-fcc1-4534-9aca-64ed24279425/resourceGroups/**abindev-rg
