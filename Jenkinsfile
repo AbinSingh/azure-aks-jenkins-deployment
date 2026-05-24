@@ -69,6 +69,17 @@ pipeline {
                 }
             }
 
+        stage('Attach ACR to AKS') {
+                steps {
+                    sh '''
+                    az aks update \
+                      --resource-group abindev-rg \
+                      --name aks-practice-cluster \
+                      --attach-acr $ACR_NAME
+                    '''
+                }
+            }
+
         stage('Deploy to AKS') {
             steps {
                 sh '''
