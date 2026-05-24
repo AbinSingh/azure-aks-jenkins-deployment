@@ -83,5 +83,5 @@ Save.
  
  az ad sp create-for-rbac \
    --name jenkins-sp \
-   --role Contributor \
+   --role Owner \
    --scopes /subscriptions/SUBSCRIPTION_ID/resourceGroups/YOUR_RESOURCE_GROUP
