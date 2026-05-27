@@ -245,6 +245,7 @@ Run:
 
 ```bash
 sudo usermod -aG docker jenkins
+sudo usermod -aG docker jenkinsvm # read about this
 ```
 
 Restart Jenkins:
